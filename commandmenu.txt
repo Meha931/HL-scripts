@@ -1,19 +1,36 @@
 "1" "Mouse3 mode" {
-	"1" "Autokey" {
-		"1" "BHop" "bind mouse3 +bh_spec"
-		"2" "Duckroll" "bind mouse3 +dr_spec"
-	}
-	"2" "BHop Legacy" "bind mouse3 bh_toggle"
-	"3" "Zoom" "bind mouse3 +zoom"
-	"4" "Xbow" "bind mouse3 xbow"
-	"5" "Use mode" {
+	"1" "BHop Legacy toggle" "bind mouse3 bh_toggle"
+	"2" "Zoom" "bind mouse3 +zoom"
+	"3" "Xbow" "bind mouse3 xbow"
+	"4" "Use mode" {
 		"1" "Hold" "bind mouse3 +use"
 		"2" "Single" "bind mouse3 use_single"
+	}
+	"5" "_Specials" {
+		"1" "BHop" "bind mouse3 +bh_spec"
+		"2" "Duckroll" "bind mouse3 +dr_spec"
 		"3" "Usespam" "bind mouse3 +use_spec"
 	}
 	"6" "Gauss Boost" "bind mouse3 +tau"
 }
-"2" "_Special autokeys" {
+"2" "BHop Legacy" {
+	"1" "Enable" "bhon"
+	"2" "Disable" "bind space +jump;echo BHop Legacy OFF"
+	"3" "Execute" "exec bhop_legacy.cfg"
+	"4" "Mode: Single" "bh1"
+	"5" "Mode: Double" "bh2"
+	"6" "Mode: Triple" "bh3"
+	"7" "Mode: 5x" "bh5"
+	"8" "Mode: 10x" "bh10"
+	"9" "Mode: 20x" "bh20"
+}
+"3" "Load Zoom" "exec zoom.cfg"
+"4" "Load Xbow" "exec xbow.cfg"
+"5" "Setups" {
+	"1" "All" "exec customs.cfg;exec bhop_legacy.cfg;exec zoom.cfg;exec xbow.cfg"
+	"2" "Special" "exec bhop_special.cfg;exec duckroll_special.cfg;exec use_special;exec zoom.cfg;exec xbow.cfg;exec gaussboost.cfg"
+}
+"8" "_Special autokeys" {
 	"1" "BHop" {
 		"1" "Enable" "bind space +bh_spec"
 		"2" "Disable" "bind space +jump"
@@ -30,20 +47,5 @@
 		"0" "Execute" "exec use_special.cfg"
 	}
 }
-"3" "BHop Legacy" {
-	"1" "Enable" "bhon"
-	"2" "Disable" "bhoff"
-	"3" "Execute" "exec bhop_legacy.cfg"
-	"4" "Mode: Single" "bh1"
-	"5" "Mode: Double" "bh2"
-	"6" "Mode: Triple" "bh3"
-	"7" "Mode: 4x" "bh4"
-	"8" "Mode: 5x" "bh5"
-}
-"4" "Zoom" "exec zoom.cfg"
-"5" "Xbow" "exec xbow.cfg"
-"8" "Custom sets" {
-	"1" "Standard" "exec bhop_special.cfg;exec duckroll_special.cfg;exec use_special;exec zoom.cfg;exec xbow.cfg;exec gaussboost.cfg"
-}
-"9" "All" "exec bhop_legacy.cfg;exec zoom.cfg;exec xbow.cfg"
-"0" "Other..." "messagemode exec"
+"9" "Other..." "messagemode exec"
+"0" "Exit" "slot10"
