@@ -27,8 +27,18 @@
 "3" "Load Zoom" "exec zoom.cfg"
 "4" "Load Xbow" "exec xbow.cfg"
 "5" "Setups" {
-	"1" "All" "exec customs.cfg;exec bhop_legacy.cfg;exec zoom.cfg;exec xbow.cfg"
-	"2" "Special" "exec bhop_special.cfg;exec duckroll_special.cfg;exec use_special;exec zoom.cfg;exec xbow.cfg;exec gaussboost.cfg"
+	"1" "Basic" "exec customs.cfg;exec bhop_legacy.cfg;exec zoom.cfg;exec xbow.cfg"
+	"2" "Special" "exec bhop_special.cfg;exec duckroll_special.cfg;exec use_special;exec zoom.cfg;exec xbow.cfg;exec customs.cfg"
+}
+"7" "Records" {
+	"1" "Start" "messagemode record"
+	"2" "Stop" "stop"
+	"3" "Play" "messagemode playdemo"
+	"4" "Menu" "viewdemo"
+	"5" "Capture movie" "messagemode startmovie"
+	"6" "End movie" "endmovie"
+	"7" "Save game" "messagemode save"
+	"8" "Load game" "messagemode load"
 }
 "8" "_Special autokeys" {
 	"1" "BHop" {
